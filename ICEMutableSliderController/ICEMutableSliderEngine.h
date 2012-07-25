@@ -87,8 +87,8 @@ typedef enum {
               rightController:(UIViewController*)rightController
                   andDelegate:(id<ICEMutableSliderEngineDelegate>)delegate;
 
-// Init the MS Engine with all the settings.
-- (void)initMSEngineWithType:(MSEngineType)engineType
+// Load the MS Engine with all the settings.
+- (void)loadMSEngineWithType:(MSEngineType)engineType
         slideMaxPositionLeft:(CGFloat)positionLeft
        slideMaxPositionRight:(CGFloat)positionRight
          enablePanRecognizer:(bool)enablePanRecognizer
