@@ -13,8 +13,8 @@
 // **************************************
 // **          MS ENGINE INIT          **
 // **************************************
-// Init the MS Engine with type
-- (void)initMSEngineWithType:(MSEngineType)engineType;
+// Load the MS Engine with type
+- (void)loadMSEngineWithType:(MSEngineType)engineType;
 // Load the MS max positions for the slider.
 - (void)loadMSEngineMaxPositions;
 // **************************************
@@ -150,7 +150,7 @@
     [self MSEngineWillBegin];
     
     // Init the engine.
-    [self initMSEngineWithType:MSEngineTypeLeftAndRight];
+    [self loadMSEngineWithType:MSEngineTypeLeftAndRight];
 }
 
 - (void)viewDidUnload
@@ -164,10 +164,10 @@
 }
 
 #pragma mark - MS Engine init & load
-// Init the MS Engine with type and load the defined settings in header.
-- (void)initMSEngineWithType:(MSEngineType)engineType{
+// Load the MS Engine with type and load the defined settings in header.
+- (void)loadMSEngineWithType:(MSEngineType)engineType{
     // Configure with default.
-    [self initMSEngineWithType:engineType
+    [self loadMSEngineWithType:engineType
           slideMaxPositionLeft:kMSEngineMaxSlidePositionEndLeft
          slideMaxPositionRight:kMSEngineMaxSlidePositionEndRight
            enablePanRecognizer:kMSEngineFingerStartTheSlider
@@ -178,8 +178,8 @@
     [self loadMSEngineMaxPositions];
 }
 
-// Init the MS Engine with all the settings.
-- (void)initMSEngineWithType:(MSEngineType)engineType
+// Load the MS Engine with all the settings.
+- (void)loadMSEngineWithType:(MSEngineType)engineType
         slideMaxPositionLeft:(CGFloat)positionLeft
        slideMaxPositionRight:(CGFloat)positionRight
          enablePanRecognizer:(bool)enablePanRecognizer
