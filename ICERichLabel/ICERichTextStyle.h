@@ -27,7 +27,7 @@
 @property (nonatomic) UIColor *color;
 @property (nonatomic) UIColor *backgroundColor;
 @property (nonatomic) NSString *prefix;
-@property (nonatomic, assign) BOOL prefixIsHidden;
+@property (nonatomic, unsafe_unretained) BOOL prefixIsHidden;
 @property (unsafe_unretained, nonatomic, readonly) id target;
 @property (nonatomic, readonly) SEL action;
 

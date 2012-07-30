@@ -752,20 +752,22 @@
             
         case MSEngineStateSlideLeft:
             viewToFade = rightController_.view;
-            if (kMSEngineFadeRightEnabled)
+            if (kMSEngineFadeRightEnabled){
                 if (currentMSEnginePosition_ == MSEngineCurrentPositionOrigin)
                     alphaBack = kMSEngineFadeValueMin;
                 else
                     alphaBack = kMSEngineFadeValueMax;
+            }
             break;
             
         case MSEngineStateSlideRight:
             viewToFade = leftController_.view;
-            if (kMSEngineFadeLeftEnabled)
+            if (kMSEngineFadeLeftEnabled){
                 if (currentMSEnginePosition_ == MSEngineCurrentPositionOrigin)
                     alphaBack = kMSEngineFadeValueMin;
                 else
                     alphaBack = kMSEngineFadeValueMax;
+            }
             break;
     }     
     
