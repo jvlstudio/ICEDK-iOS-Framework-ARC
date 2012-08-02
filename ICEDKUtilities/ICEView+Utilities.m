@@ -32,6 +32,16 @@
 	[self setFrame:frame];
 }
 
+// Set position.
+- (void)setPosition:(CGPoint)position{
+    [self positionAtX:position.x andY:position.y];
+}
+
+//Set centered anchor point, on point.
+- (void)setPositionCenteredOnPoint:(CGPoint)position{
+   [self positionAtX:(position.x - self.frame.size.width / 2) andY:(position.y - self.frame.size.height / 2)];
+}
+
 // Remove all the subviews.
 - (void)removeSubviews{
 	for(UIView *view in self.subviews) {
