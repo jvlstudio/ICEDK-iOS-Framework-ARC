@@ -31,4 +31,14 @@
 + (CABasicAnimation*)rotateAnimationOnZToAngle:(double)angle;
 // Rotation on Z from ANGLE to ANGLE.
 + (CABasicAnimation*)rotateAnimationOnZFromAngle:(double)fromAngle toAngle:(double)toAngle;
+
+
+// Clear and black horizontal gradient
++ (CAGradientLayer *)clearAndBlackHorizontalGradientWithFrame:(CGRect)frame isInverse:(BOOL)inverse;
+// Clear and black vertical gradient
++ (CAGradientLayer *)clearAndBlackVerticalGradientWithFrame:(CGRect)frame isInverse:(BOOL)inverse;
+// Horizontal gradient
++ (CAGradientLayer *)horizontalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse;
+// Vertical gradient
++ (CAGradientLayer *)verticalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse;
 @end

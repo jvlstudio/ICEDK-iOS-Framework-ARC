@@ -82,5 +82,57 @@
     [animation setToValue:[NSNumber numberWithDouble:toAngle*M_PI/180]];
     return animation;
 }
-    
+
+// Clear and black horizontal gradient
++ (CAGradientLayer *)clearAndBlackHorizontalGradientWithFrame:(CGRect)frame isInverse:(BOOL)inverse
+{
+	return [self horizontalGradientWithFrame:frame color1:[UIColor clearColor] color2:[UIColor blackColor] isInverse:inverse];
+}
+// Clear and black vertical gradient
++ (CAGradientLayer *)clearAndBlackVerticalGradientWithFrame:(CGRect)frame isInverse:(BOOL)inverse
+{
+	return [self verticalGradientWithFrame:frame color1:[UIColor clearColor] color2:[UIColor blackColor] isInverse:inverse];
+}
+
+// Horizontal gradient
++ (CAGradientLayer *)horizontalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse
+{
+	NSArray *colors = [NSArray arrayWithObjects:(__bridge id)[color1 CGColor], (__bridge id)[color2 CGColor], nil];
+
+	CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+	[gradientLayer setColors:colors];
+	[gradientLayer setFrame:frame];
+
+	if (!inverse) {
+		[gradientLayer setStartPoint:CGPointMake(0.0, 0.5)];
+		[gradientLayer setEndPoint:CGPointMake(1.0, 0.5)];
+	}
+	else {
+		[gradientLayer setStartPoint:CGPointMake(1.0, 0.5)];
+		[gradientLayer setEndPoint:CGPointMake(0.0, 0.5)];
+	}
+	return gradientLayer;
+}
+
+// Vertical gradient
++ (CAGradientLayer *)verticalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse
+{
+	NSArray *colors = [NSArray arrayWithObjects:(__bridge id)[color1 CGColor], (__bridge id)[color2 CGColor], nil];
+
+	CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+	[gradientLayer setColors:colors];
+	[gradientLayer setFrame:frame];
+
+	if (!inverse) {
+		[gradientLayer setStartPoint:CGPointMake(0.5, 0.0)];
+		[gradientLayer setEndPoint:CGPointMake(0.5, 1.0)];
+	}
+	else {
+		[gradientLayer setStartPoint:CGPointMake(0.5, 1.0)];
+		[gradientLayer setEndPoint:CGPointMake(0.5, 0.0)];
+	}
+	return gradientLayer;
+}
+
+
 @end
