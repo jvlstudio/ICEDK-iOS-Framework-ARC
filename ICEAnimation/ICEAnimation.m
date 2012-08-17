@@ -135,4 +135,26 @@
 }
 
 
+// Presents a modalViewController with a flip animation
++ (void)presentModalViewControllerWithFlipAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController
+{
+	modalViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	[rootViewController presentModalViewController:modalViewController animated:YES];
+}
+
+// Presents a modalViewController with a flip animation
++ (void)presentModalViewControllerWithPartialCurlAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController
+{
+	modalViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+	[rootViewController presentModalViewController:modalViewController animated:YES];
+}
+
+// Presents a modalViewController with a cross disolve animation
++ (void)presentModalViewControllerWithCrossDisolveAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController
+{
+	modalViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+	[rootViewController presentModalViewController:modalViewController animated:YES];
+}
+
+
 @end
