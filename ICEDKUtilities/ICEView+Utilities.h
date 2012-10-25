@@ -23,6 +23,8 @@
 - (void)setPositionCenteredOnPoint:(CGPoint)position;
 // Remove all the subviews.
 - (void)removeSubviews;
+// Check existing collision between point and rect.
+- (BOOL)getCollisionOnViewWithPoint:(CGPoint)position;
 // Render an UIImage from UIView.
 - (UIImage *)renderImageFromView;
 // Render an UIImage from UIView with a rect.

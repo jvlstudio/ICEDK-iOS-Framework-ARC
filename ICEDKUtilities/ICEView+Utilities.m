@@ -49,6 +49,21 @@
 	}
 }
 
+// Check existing collision between point and rect.
+- (BOOL)getCollisionOnViewWithPoint:(CGPoint)position{
+    CGSize targetSize = self.frame.size;
+    CGPoint targetPosition = self.frame.origin;
+
+    // Collision detected.
+    if (![self isHidden])
+        if ((position.x > targetPosition.x) && (position.x < (targetPosition.x + targetSize.width)))
+            if ((position.y > targetPosition.y) && (position.y < (targetPosition.y + targetSize.height)))
+                return YES;
+
+    // No touch on view.
+    return NO;
+}
+
 // Render an UIImage from UIView.
 - (UIImage *)renderImageFromView{
 	return [self renderImageFromViewWithRect:self.bounds];
