@@ -90,4 +90,26 @@
     return renderedImage;
 }
 
+// Get the touch position in the subview with the position in the parent view.
+- (CGPoint)subViewGetPositionOfTouch:(CGPoint)touch{
+    CGPoint position = CGPointMake(touch.x - self.frame.origin.x, touch.y - self.frame.origin.y);
+    if (position.x < 0)
+        position.x = 0;
+    else if (position.x > self.frame.size.width)
+        position.x = self.frame.size.width;
+
+    if (position.y < 0)
+        position.y = 0;
+    else if (position.y > self.frame.size.height)
+        position.y = self.frame.size.height;
+
+    return position;
+}
+
+// Get the the texture position of the touch
+- (CGPoint)getTexturePositionOfTouch:(CGPoint)touch withScale:(CGFloat)scale{
+    return CGPointMake((touch.x / self.frame.size.width) * scale, (touch.y / self.frame.size.height) * scale);
+}
+
+
 @end
