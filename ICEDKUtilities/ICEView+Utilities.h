@@ -31,7 +31,8 @@
 - (UIImage *)renderImageFromViewWithRect:(CGRect)frame;
 // Get the touch position in the subview with the position in the parent view.
 - (CGPoint)subViewGetPositionOfTouch:(CGPoint)touch;
-// Get the the texture position of the touch
-- (CGPoint)getTexturePositionOfTouch:(CGPoint)touch withScale:(CGFloat)scale;
+// Get the the texture position of the touch.
+- (CGPoint)getTexturePositionOfTouch:(CGPoint)touch withScale:(CGFloat)scale;// Get the the view position of the texture position.
+- (CGPoint)getViewPositionOfTexturePosition:(CGPoint)texturePosition withScale:(CGFloat)scale;
 
 @end

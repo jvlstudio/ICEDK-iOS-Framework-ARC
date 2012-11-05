@@ -106,9 +106,14 @@
     return position;
 }
 
-// Get the the texture position of the touch
+// Get the the texture position of the touch.
 - (CGPoint)getTexturePositionOfTouch:(CGPoint)touch withScale:(CGFloat)scale{
     return CGPointMake((touch.x / self.frame.size.width) * scale, (touch.y / self.frame.size.height) * scale);
+}
+
+// Get the the view position of the texture position.
+- (CGPoint)getViewPositionOfTexturePosition:(CGPoint)texturePosition withScale:(CGFloat)scale{
+    return CGPointMake((texturePosition.x * self.frame.size.width) * scale, (texturePosition.y * self.frame.size.height) * scale);
 }
 
 
