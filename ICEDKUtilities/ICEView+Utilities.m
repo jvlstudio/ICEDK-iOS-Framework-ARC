@@ -32,6 +32,13 @@
 	[self setFrame:frame];
 }
 
+- (void)translateWithVector:(CGPoint)position{
+    CGRect frame = [self frame];
+    frame.origin.x = round(frame.origin.x + position.x);
+    frame.origin.y = round(frame.origin.y + position.y);
+    [self setFrame:frame];
+}
+
 // Set position.
 - (void)setPosition:(CGPoint)position{
     [self positionAtX:position.x andY:position.y];

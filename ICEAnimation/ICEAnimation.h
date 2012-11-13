@@ -51,4 +51,13 @@
 // Presents a modalViewController with a cross disolve animation
 + (void)presentModalViewControllerWithCrossDisolveAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController;
 
+// Wobble animation.
++ (void)startWobble:(UIView *)view;
++ (void)stopWobble:(UIView *)view;
+
++ (void)startJiggling:(UIView *)view;
++ (void)stopJiggling:(UIView *)view;
+
++ (void)startShakeAnimation:(UIView *)view;
++ (void)stopShakeAnimation:(UIView *)view;
 @end

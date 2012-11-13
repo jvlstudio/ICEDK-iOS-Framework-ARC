@@ -17,6 +17,7 @@
 - (void)setSize:(CGSize)size;
 // Set the position on X and Y.
 - (void)positionAtX:(double)positionX andY:(double)positionY;
+- (void)translateWithVector:(CGPoint)position;
 // Set position.
 - (void)setPosition:(CGPoint)position;
 //Set centered anchor point, on point.
