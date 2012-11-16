@@ -238,8 +238,8 @@
                  }
                  completion:^(BOOL finished){
                      [UIView animateWithDuration:0.25
-                                           delay: 0.0
-                                         options: UIViewAnimationOptionAllowUserInteraction
+                                           delay:0.0
+                                         options:UIViewAnimationOptionAllowUserInteraction
                                       animations:^{
                                           view.transform = CGAffineTransformTranslate(view.transform, -kAnimationTranslateX, -kAnimationTranslateY);
                                           view.transform = CGAffineTransformMakeRotation(-kAnimationRotateDeg*(i%2 ? +1 : -1)*(3.141519/180.0));
