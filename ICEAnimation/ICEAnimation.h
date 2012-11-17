@@ -60,4 +60,9 @@
 
 + (void)startShakeAnimation:(UIView *)view;
 + (void)stopShakeAnimation:(UIView *)view;
+
++ (void)moveView:(UIView *)view withFrame:(CGRect)frame;
++ (void)moveView:(UIView *)view withPosition:(CGPoint)position;
++ (void)moveView:(UIView *)view withFrame:(CGRect)frame completion:(void (^)(BOOL finished))completion;
++ (void)moveView:(UIView *)view withPosition:(CGPoint)position completion:(void (^)(BOOL finished))completion;
 @end

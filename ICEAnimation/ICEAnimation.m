@@ -7,6 +7,7 @@
 //
 
 #import "ICEAnimation.h"
+#import "ICEView+Utilities.h"
 
 @implementation ICEAnimation
     
@@ -313,5 +314,37 @@
         view.transform = CGAffineTransformTranslate(view.transform, X_OFFSET*0.5, Y_OFFSET*0.5f);
     }];
 }
+
++ (void)moveView:(UIView *)view withFrame:(CGRect)frame {
+
+    [self moveView:view withFrame:frame completion:NULL];
+}
+
++ (void)moveView:(UIView *)view withPosition:(CGPoint)position{
+    [self moveView:view withPosition:position completion:NULL];    
+}
+
++ (void)moveView:(UIView *)view withFrame:(CGRect)frame completion:(void (^)(BOOL finished))completion{
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+                        options:UIViewAnimationCurveEaseInOut
+                     animations:^ {
+                         [view setFrame:frame];
+                     }
+                     completion:completion
+     ];
+}
+
++ (void)moveView:(UIView *)view withPosition:(CGPoint)position completion:(void (^)(BOOL finished))completion{
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+                        options:UIViewAnimationCurveEaseInOut
+                     animations:^ {
+                         [view setPosition:position];
+                     }
+                     completion:NULL
+     ];
+}
+
 
 @end
