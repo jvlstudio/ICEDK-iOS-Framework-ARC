@@ -135,6 +135,21 @@
 	return gradientLayer;
 }
 
+// Black CALayer
++ (CALayer *)blackLayerWithFrame:(CGRect)frame opacity:(CGFloat)opacity
+{
+	return [self layerWithFrame:frame color:[UIColor blackColor] opacity:opacity];
+}
+// CALayer with color
++ (CALayer *)layerWithFrame:(CGRect)frame color:(UIColor *)color opacity:(CGFloat)opacity
+{
+	CALayer *layer = [CALayer layer];
+	layer.frame = frame;
+	layer.backgroundColor = [color CGColor];
+	layer.opacity = opacity;
+
+	return layer;
+}
 
 // Presents a modalViewController with a flip animation
 + (void)presentModalViewControllerWithFlipAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController

@@ -42,7 +42,10 @@
 // Vertical gradient
 + (CAGradientLayer *)verticalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse;
 
-
+// Black CALayer
++ (CALayer *)blackLayerWithFrame:(CGRect)frame opacity:(CGFloat)opacity;
+// CALayer with color
++ (CALayer *)layerWithFrame:(CGRect)frame color:(UIColor *)color opacity:(CGFloat)opacity;
 
 // Presents a modalViewController with a flip animation
 + (void)presentModalViewControllerWithFlipAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController;
