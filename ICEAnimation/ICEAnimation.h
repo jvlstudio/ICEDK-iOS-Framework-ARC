@@ -32,21 +32,6 @@
 // Rotation on Z from ANGLE to ANGLE.
 + (CABasicAnimation*)rotateAnimationOnZFromAngle:(double)fromAngle toAngle:(double)toAngle;
 
-
-// Clear and black horizontal gradient
-+ (CAGradientLayer *)clearAndBlackHorizontalGradientWithFrame:(CGRect)frame isInverse:(BOOL)inverse;
-// Clear and black vertical gradient
-+ (CAGradientLayer *)clearAndBlackVerticalGradientWithFrame:(CGRect)frame isInverse:(BOOL)inverse;
-// Horizontal gradient
-+ (CAGradientLayer *)horizontalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse;
-// Vertical gradient
-+ (CAGradientLayer *)verticalGradientWithFrame:(CGRect)frame color1:(UIColor *)color1 color2:(UIColor *)color2 isInverse:(BOOL)inverse;
-
-// Black CALayer
-+ (CALayer *)blackLayerWithFrame:(CGRect)frame opacity:(CGFloat)opacity;
-// CALayer with color
-+ (CALayer *)layerWithFrame:(CGRect)frame color:(UIColor *)color opacity:(CGFloat)opacity;
-
 // Presents a modalViewController with a flip animation
 + (void)presentModalViewControllerWithFlipAnimation:(UIViewController *)rootViewController andModalViewController:(UIViewController *)modalViewController;
 // Presents a modalViewController with a partial curl animation
