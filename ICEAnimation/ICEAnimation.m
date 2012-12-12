@@ -263,8 +263,28 @@
     }];
 }
 
-+ (void)moveView:(UIView *)view withFrame:(CGRect)frame {
++ (void)fadeView:(UIView *)view toValue:(CGFloat)value{
+    [UIView animateWithDuration:0.4
+                          delay:0.0
+                        options:UIViewAnimationCurveEaseInOut
+                     animations:^ {
+                         [view setAlpha:value];
+                     }
+                     completion:nil
+     ];
+}
 
++ (void)fadeLayer:(CALayer *)layer fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+	[animation setFillMode:kCAFillModeForwards];
+	[animation setRemovedOnCompletion:NO];
+    [animation setDuration:0.4];
+    [animation setFromValue:[NSNumber numberWithFloat:fromValue]];
+    [animation setToValue:[NSNumber numberWithFloat:toValue]];
+    [layer addAnimation:animation forKey:@"shake_rotation"];    
+}
+
++ (void)moveView:(UIView *)view withFrame:(CGRect)frame{
     [self moveView:view withFrame:frame completion:NULL];
 }
 

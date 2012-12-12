@@ -49,6 +49,9 @@
 + (void)startShakeAnimation:(UIView *)view;
 + (void)stopShakeAnimation:(UIView *)view;
 
++ (void)fadeView:(UIView *)view toValue:(CGFloat)value;
++ (void)fadeLayer:(CALayer *)layer fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue;
+
 + (void)moveView:(UIView *)view withFrame:(CGRect)frame;
 + (void)moveView:(UIView *)view withPosition:(CGPoint)position;
 + (void)moveView:(UIView *)view withFrame:(CGRect)frame completion:(void (^)(BOOL finished))completion;
