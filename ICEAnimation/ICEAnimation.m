@@ -264,7 +264,7 @@
 }
 
 + (void)fadeView:(UIView *)view toValue:(CGFloat)value{
-    [UIView animateWithDuration:0.4
+    [UIView animateWithDuration:0.2
                           delay:0.0
                         options:UIViewAnimationCurveEaseInOut
                      animations:^ {
