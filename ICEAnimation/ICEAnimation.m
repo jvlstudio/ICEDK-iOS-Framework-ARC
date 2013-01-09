@@ -310,7 +310,7 @@
                      animations:^ {
                          [view setPosition:position];
                      }
-                     completion:NULL
+                     completion:completion
      ];
 }
 
