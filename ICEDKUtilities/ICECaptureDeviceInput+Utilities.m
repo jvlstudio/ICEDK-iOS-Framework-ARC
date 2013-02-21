@@ -35,7 +35,7 @@
             [device setFlashMode:flashMode];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
@@ -59,7 +59,7 @@
             [device setTorchMode:torchMode];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
@@ -87,7 +87,7 @@
             [device setFocusMode:focusMode];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
@@ -103,7 +103,7 @@
             [device setFocusMode:AVCaptureFocusModeAutoFocus];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
@@ -134,7 +134,7 @@
             [device setExposureMode:exposureMode];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
@@ -149,7 +149,7 @@
             [device setExposureMode:AVCaptureExposureModeContinuousAutoExposure];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
@@ -180,7 +180,7 @@
             [device setWhiteBalanceMode:whiteBalanceMode];
             [device unlockForConfiguration];
         } else {
-            NSLog(@"Failed to get lock on APN configuration %@", error);
+            DLog(@"Failed to get lock on APN configuration %@", error);
         }
     }
 }
